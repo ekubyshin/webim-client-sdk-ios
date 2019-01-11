@@ -25,7 +25,6 @@
 //
 
 import Foundation
-import SQLite
 
 /**
  Class that is responsible for history storage inside SQLite DB. Uses SQLite.swift library.
