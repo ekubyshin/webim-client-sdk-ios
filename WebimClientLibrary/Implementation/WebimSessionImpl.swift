@@ -367,9 +367,8 @@ extension WebimSessionImpl: WebimSession {
         if sessionDestroyer.isDestroyed() {
             return
         }
-        
+        WebimInternalLogger.setup(webimLogger: nil, verbosityLevel: nil)
         try checkAccess()
-        
         sessionDestroyer.destroy()
         WebimSessionImpl.clearVisitorDataFor(userDefaultsKey: sessionDestroyer.getUserDefaulstKey())
     }
