@@ -362,6 +362,7 @@ extension WebimSessionImpl: WebimSession {
         try checkAccess()
         
         sessionDestroyer.destroy()
+        WebimInternalLogger.setup(webimLogger: nil, verbosityLevel: nil)
     }
     
     func destroyWithClearVisitorData() throws {
